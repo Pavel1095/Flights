@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class FlightBuilder { static List<Flight> createFlights() {
     LocalDateTime threeDaysFromNow = LocalDateTime.now().plusDays(3);

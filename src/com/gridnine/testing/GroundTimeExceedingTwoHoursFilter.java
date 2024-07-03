@@ -11,9 +11,9 @@ public class GroundTimeExceedingTwoHoursFilter  implements FlightFilter {
             LocalDateTime arrival = segments.get(i).getArrivalDate();
             LocalDateTime nextDeparture = segments.get(i + 1).getDepartureDate();
             if (arrival.plusHours(2).isBefore(nextDeparture)) {
-                return true;
+                return false;
             }
         }
-        return false;
+        return true;
     }
 }
